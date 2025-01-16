@@ -12,7 +12,7 @@ import certificates from "./lib/certificates.json";
 import { scrollTo } from "./lib/utils";
 import { Link } from "react-router-dom";
 import ScrollReveal from "scrollreveal";
-import { Carousel } from "flowbite-react";
+import { Carousel, CustomFlowbiteTheme } from "flowbite-react";
 import {
   Accordion,
   AccordionContent,
@@ -138,11 +138,26 @@ function Projects({ projects }: { projects: Project[] }) {
   ));
 }
 
+const customTheme: CustomFlowbiteTheme["carousel"] = {
+  control: {
+    base: "inline-flex h-8 w-8 items-center justify-center rounded-full bg-black/30 group-hover:bg-black/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-neutral-600 dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70 sm:h-10 sm:w-10",
+    icon: "h-5 w-5 text-white dark:text-gray-800 sm:h-6 sm:w-6",
+  },
+  indicators: {
+    wrapper:
+      "absolute bottom-24 sm:bottom-12 md:bottom-5 left-1/2 flex -translate-x-1/2 space-x-3",
+  },
+};
+
 function Certificates({ certificates }: { certificates: Certificate[] }) {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <div className="flex cursor-pointer flex-col items-center gap-4 h-full">
-      <Carousel onSlideChange={(index) => setActiveIndex(index)}>
+    <div className="flex cursor-pointer flex-col items-center md:gap-4 h-full">
+      <Carousel
+        theme={customTheme}
+        className="gap-96"
+        onSlideChange={(index) => setActiveIndex(index)}
+      >
         {certificates.map((c, index) => (
           <a href={c.link} target="_blank" key={index}>
             <img

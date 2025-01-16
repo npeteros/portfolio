@@ -18,6 +18,12 @@
         "link": "https://themandaraspa.vercel.app/"
     },
     {
+        "name": "World of Darkness Roleplay",
+        "desc": "A frontend web application currently under development for a client, designed to showcase the features of the World of Darkness roleplaying game. Built using Next.js, Tailwind CSS, Flowbite, and ShadCN, the application serves as a game feature showcase. In the future, it will evolve into a full-stack application with an announcement hub for game updates and a user control panel allowing players to manage and edit their characters. The project is an ongoing work in progress, with deployment planned once full functionality is implemented.",
+        "img": "https://i.imgur.com/PgFdmDb.png",
+        "link": "https://wod-rp.vercel.app/"
+    },
+    {
         "name": "Teach Online Piano",
         "desc": "A single-page website developed through Wordpress for a client, featuring her services, customer feedback, student reviews and accomplishments, as well as mail integration in a contact form.",
         "img": "https://i.imgur.com/oiJOQ9z.png",
