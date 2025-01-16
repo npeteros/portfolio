@@ -1,0 +1,164 @@
+[
+    {
+        "name": "HTML5",
+        "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png",
+        "link": "https://www.w3schools.com/html/html5_intro.asp",
+        "rating": 10
+    },
+    {
+        "name": "CSS3",
+        "icon": "https://img.icons8.com/color/48/000000/css3.png",
+        "link": "https://www.w3schools.com/css/css3_intro.asp",
+        "rating": 10
+    },
+    {
+        "name": "PHP",
+        "icon": "https://img.icons8.com/offices/48/000000/php-logo.png",
+        "link": "https://www.php.net/",
+        "rating": 8
+    },
+    {
+        "name": "Laravel",
+        "icon": "https://img.icons8.com/?id=lRjcvhvtR81o&format=png&color=000000",
+        "link": "https://laravel.com/",
+        "rating": 7
+    },
+    {
+        "name": "JavaScript",
+        "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png",
+        "link": "https://www.w3schools.com/js/",
+        "rating": 10
+    },
+    {
+        "name": "jQuery",
+        "icon": "https://img.icons8.com/ios-filled/48/1169ae/jquery.png",
+        "link": "https://jquery.com/",
+        "rating": 10
+    },
+    {
+        "name": "ReactJS",
+        "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png",
+        "link": "https://reactjs.org/",
+        "rating": 9
+    },
+    {
+        "name": "ExpressJS",
+        "icon": "https://img.icons8.com/fluency/48/000000/node-js.png",
+        "link": "https://expressjs.com/",
+        "rating": 9
+    },
+    {
+        "name": "NodeJS",
+        "icon": "https://img.icons8.com/color/48/000000/nodejs.png",
+        "link": "https://nodejs.org/",
+        "rating": 8
+    },
+    {
+        "name": "MySQL",
+        "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png",
+        "link": "https://www.mysql.com/",
+        "rating": 10
+    },
+    {
+        "name": "PostgreSQL",
+        "icon": "https://img.icons8.com/color/48/000000/postgreesql.png",
+        "link": "https://www.postgresql.org/",
+        "rating": 10
+    },
+    {
+        "name": "Supabase",
+        "icon": "skills/supabase.png",
+        "link": "https://supabase.io/",
+        "rating": 9
+    },
+    {
+        "name": "Firebase",
+        "icon": "https://img.icons8.com/color/48/000000/firebase.png",
+        "link": "https://firebase.google.com/",
+        "rating": 7
+    },
+    {
+        "name": "MaterialUI",
+        "icon": "https://img.icons8.com/color/48/000000/material-ui.png",
+        "link": "https://mui.com/",
+        "rating": 5
+    },
+    {
+        "name": "ChakraUI",
+        "icon": "https://img.icons8.com/color/48/000000/chakra-ui.png",
+        "link": "https://chakra-ui.com/",
+        "rating": 5
+    },
+    {
+        "name": "PrimeReact",
+        "icon": "skills/primereact.png",
+        "link": "https://www.primefaces.org/primereact/",
+        "rating": 8
+    },
+    {
+        "name": "Shadcn/UI",
+        "icon": "skills/shadcn.png",
+        "link": "https://www.shadcn.com/",
+        "rating": 7
+    },
+    {
+        "name": "TailwindCSS",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/48px-Tailwind_CSS_Logo.png",
+        "link": "https://tailwindcss.com/",
+        "rating": 9
+    },
+    {
+        "name": "Bootstrap",
+        "icon": "https://img.icons8.com/color/48/000000/bootstrap.png",
+        "link": "https://getbootstrap.com/",
+        "rating": 8
+    },
+    {
+        "name": "Redux",
+        "icon": "https://i.imgur.com/OPF6p1y.png",
+        "link": "https://redux.js.org/",
+        "rating": 8
+    },
+    {
+        "name": "Python",
+        "icon": "https://img.icons8.com/color/48/000000/python--v1.png",
+        "link": "https://www.python.org/",
+        "rating": 5
+    },
+    {
+        "name": "C",
+        "icon": "skills/c-lang.png",
+        "link": "https://en.cppreference.com/w/",
+        "rating": 6
+    },
+    {
+        "name": "Git VCS",
+        "icon": "https://img.icons8.com/color/48/000000/git.png",
+        "link": "https://git-scm.com/",
+        "rating": 10
+    },
+    {
+        "name": "GitHub",
+        "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png",
+        "link": "https://github.com/",
+        "rating": 10
+    },
+    {
+        "name": "WordPress",
+        "icon": "https://img.icons8.com/color/48/000000/wordpress.png",
+        "link": "https://wordpress.com/",
+        "rating": 7
+    },
+    {
+        "name": "DiscordJS",
+        "icon": "https://img.icons8.com/color/48/000000/discord.png",
+        "link": "https://discord.js.org/",
+        "rating": 6
+    },
+    {
+        "name": "MongoDB",
+        "icon": "https://img.icons8.com/color/48/000000/mongodb.png",
+        "link": "https://www.mongodb.com/",
+        "rating": 4
+    }
+]

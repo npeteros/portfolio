@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Introduction to Python",
+        "desc": "Master the basics of data analysis with Python in just four hours. This online course will introduce the Python interface and explore popular packages.",
+        "img": "certificates/intro_python.png",
+        "link": "https://www.datacamp.com/statement-of-accomplishment/course/a1595064eef8a984c775a5dfcaeec3d791c738ad?raw=1"
+    },
+    {
+        "name": "Intermediate Python",
+        "desc": "Level up your data science skills by creating visualizations using Matplotlib and manipulating DataFrames with pandas.",
+        "img": "certificates/intermediate_python.png",
+        "link": "https://www.datacamp.com/statement-of-accomplishment/course/9a033704b5d35bd501778cad1d41b4af5c1cf59f?raw=1"
+    },
+    {
+        "name": "Introduction to SQL",
+        "desc": "Learn how to create and query relational databases using SQL in just two hours.",
+        "img": "certificates/intro_sql.png",
+        "link": "https://www.datacamp.com/statement-of-accomplishment/course/e4bfeee97cfd869f1d1a54a91eb5501b23dc40ea?raw=1"
+    },
+    {
+        "name": "Intermediate SQL",
+        "desc": "Accompanied at every step with hands-on practice queries, this course teaches you everything you need to know to analyze data using your own SQL code today!",
+        "img": "certificates/intermediate_sql.png",
+        "link": "https://www.datacamp.com/statement-of-accomplishment/course/feca95bd7d64b16140e042308d97a50e443614f0?raw=1"
+    },
+    {
+        "name": "Joining Data in SQL",
+        "desc": "Level up your SQL knowledge and learn to join tables together, apply relational set theory, and work with subqueries.",
+        "img": "certificates/joining_data_sql.png",
+        "link": "https://www.datacamp.com/statement-of-accomplishment/course/8accdaab41636dd8267258d87d9d6a0b34aad017?raw=1"
+    },
+    {
+        "name": "Introduction to Python for Finance",
+        "desc": "Build Python skills to elevate your finance career. Learn how to work with lists, arrays and data visualizations to master financial analyses.",
+        "img": "certificates/intro_python_finance.png",
+        "link": "https://www.datacamp.com/statement-of-accomplishment/course/722e00ae6cbd9fdb6c9f3e2a2984cd27e5d53019?raw=1"
+    },
+    {
+        "name": "Intermediate Python for Finance",
+        "desc": "Build on top of your Python skills for Finance, by learning how to use datetime, if-statements, DataFrames, and more.",
+        "img": "certificates/intermediate_python_finance.png",
+        "link": "https://www.datacamp.com/statement-of-accomplishment/course/d9da4bc3d26ac238a1445cd7208e4c0c35935b52?raw=1"
+    }
+]

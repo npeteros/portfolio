@@ -1,0 +1,26 @@
+[
+    {
+        "name": "AuditPH",
+        "desc": "Designed to promote financial literacy and responsibility by providing users with effective financial management tools, AuditPH helps users track their financial goals, budgets, transactions, and generates comprehensive analytics and financial reports based on user activity.",
+        "img": "https://i.imgur.com/JWSHC5e.png",
+        "link": "https://auditph.vercel.app/"
+    },
+    {
+        "name": "USC Days 2024 Scoreboard",
+        "desc": "A score tracking web application developed for the University of San Carlos' annual intramurals (USC Days 2024), ensuring efficient management of sports event scores, game schedules, and rankings. Built using Next.js, Supabase, Prisma ORM, Tailwind CSS, and Zustand, the application features user authentication, score updates, game scheduling, and admin management. Successfully launched and used by the entire university, it is now an annual tool for USC Days, ensuring seamless and organized score tracking for future events.",
+        "img": "https://i.imgur.com/zWt0Cv2.png",
+        "link": "https://uscdays.todayscarolinian.com/"
+    },
+    {
+        "name": "The Mandara Spa",
+        "desc": "The Mandara Spa Web Application is a fully functional booking and management platform for The Mandara Spa in the Philippines, designed to streamline appointment scheduling, user management, and branch-specific service administration. As the Project Manager and Full-Stack Developer, I built the application using Next.js, Supabase, Prisma ORM, Vercel, and Tailwind CSS, implementing user authentication, a dynamic landing page, and an inheritance-based service structure that allows treatments to vary across branches. The application is successfully deployed on Vercel as a personal project, with potential for real-world adoption.",
+        "img": "https://i.imgur.com/pgpXpoq.png",
+        "link": "https://themandaraspa.vercel.app/"
+    },
+    {
+        "name": "Teach Online Piano",
+        "desc": "A single-page website developed through Wordpress for a client, featuring her services, customer feedback, student reviews and accomplishments, as well as mail integration in a contact form.",
+        "img": "https://i.imgur.com/oiJOQ9z.png",
+        "link": "https://teachonlinepiano.com/"
+    }
+]
