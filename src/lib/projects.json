@@ -12,6 +12,12 @@
         "link": "https://uscdays.todayscarolinian.com/"
     },
     {
+        "name": "Digital Archives - Todays Carolinian",
+        "desc": "A digital archive web application developed for the University of San Carlos' official student publication, The Todays Carolinian. This application serves as a repository for the publication's historical issues, allowing users to search and access past articles. Built using Next.js, Supabase, Prisma ORM, and Tailwind CSS, it features user authentication, admin-restricted issue management, and a user-friendly interface for browsing archives. Successfully launched and used by the entire university, it is now an essential tool for preserving and accessing the publication's rich history.",
+        "img": "https://i.imgur.com/N97zde7.png",
+        "link": "https://archives.todayscarolinian.com/"
+    },
+    {
         "name": "The Mandara Spa",
         "desc": "The Mandara Spa Web Application is a fully functional booking and management platform for The Mandara Spa in the Philippines, designed to streamline appointment scheduling, user management, and branch-specific service administration. As the Project Manager and Full-Stack Developer, I built the application using Next.js, Supabase, Prisma ORM, Vercel, and Tailwind CSS, implementing user authentication, a dynamic landing page, and an inheritance-based service structure that allows treatments to vary across branches. The application is successfully deployed on Vercel as a personal project, with potential for real-world adoption.",
         "img": "https://i.imgur.com/pgpXpoq.png",
