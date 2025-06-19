@@ -160,5 +160,11 @@
         "icon": "https://img.icons8.com/color/48/000000/mongodb.png",
         "link": "https://www.mongodb.com/",
         "rating": 4
+    },
+    {
+        "name": "n8n",
+        "icon": "skills/n8n.png",
+        "link": "https://n8n.io/",
+        "rating": 7
     }
 ]
