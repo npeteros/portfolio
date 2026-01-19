@@ -24,6 +24,12 @@
         "link": "https://kidneypalph.com/"
     },
     {
+        "name": "Outfit PH",
+        "desc": "A modern simplistic website developed for Outfit Construction Inc., a company specializing in condo fit-outs, studios, offices, shops, and cafes, as well as renovations, furniture, cabinets, and smart device installations. Built using Next.js, the website showcases the company's services, portfolio of completed projects, client testimonials, and contact information. Successfully deployed and actively maintained, the website serves as a digital presence for Outfit Construction Inc., helping to attract new clients and showcase their expertise in the construction and fit-out industry.",
+        "img": "https://i.imgur.com/UD0ltj4.png",
+        "link": "https://outfit.ph/"
+    },
+    {
         "name": "World of Darkness Roleplay",
         "desc": "A frontend web application currently under development for a client, designed to showcase the features of the World of Darkness roleplaying game. Built using Next.js, Tailwind CSS, Flowbite, and ShadCN, the application serves as a game feature showcase. In the future, it will evolve into a full-stack application with an announcement hub for game updates and a user control panel allowing players to manage and edit their characters. The project is an ongoing work in progress, with deployment planned once full functionality is implemented.",
         "img": "https://i.imgur.com/PgFdmDb.png",
