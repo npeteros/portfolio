@@ -18,16 +18,16 @@
         "link": "https://thearchdioceseofcebu.com/"
     },
     {
-        "name": "KidneyPal PH",
-        "desc": "A comprehensive research website developed for a client as part of an academic study exploring the quality of life of patients with Chronic Kidney Disease (CKD) undergoing hemodialysis. As the Web Developer, I built this platform using WordPress to showcase research findings across physical, psychological, social, and environmental well-being dimensions. The website features downloadable research papers, dedicated resource sections for both patients and healthcare providers, interactive contact forms, and community forums for guests. Successfully deployed and serving CKD patients, researchers, healthcare professionals, and the general public, KidneyPal PH provides valuable insights and resources for understanding and improving the lives of those affected by chronic kidney disease.",
-        "img": "https://i.imgur.com/jTvJA88.png",
-        "link": "https://kidneypalph.com/"
-    },
-    {
         "name": "Outfit PH",
         "desc": "A modern simplistic website developed for Outfit Construction Inc., a company specializing in condo fit-outs, studios, offices, shops, and cafes, as well as renovations, furniture, cabinets, and smart device installations. Built using Next.js, the website showcases the company's services, portfolio of completed projects, client testimonials, and contact information. Successfully deployed and actively maintained, the website serves as a digital presence for Outfit Construction Inc., helping to attract new clients and showcase their expertise in the construction and fit-out industry.",
         "img": "https://i.imgur.com/UD0ltj4.png",
         "link": "https://outfit.ph/"
+    },
+    {
+        "name": "KidneyPal PH",
+        "desc": "A comprehensive research website developed for a client as part of an academic study exploring the quality of life of patients with Chronic Kidney Disease (CKD) undergoing hemodialysis. As the Web Developer, I built this platform using WordPress to showcase research findings across physical, psychological, social, and environmental well-being dimensions. The website features downloadable research papers, dedicated resource sections for both patients and healthcare providers, interactive contact forms, and community forums for guests. Successfully deployed and serving CKD patients, researchers, healthcare professionals, and the general public, KidneyPal PH provides valuable insights and resources for understanding and improving the lives of those affected by chronic kidney disease.",
+        "img": "https://i.imgur.com/jTvJA88.png",
+        "link": "https://kidneypalph.com/"
     },
     {
         "name": "World of Darkness Roleplay",
