@@ -40,5 +40,23 @@
         "desc": "Build on top of your Python skills for Finance, by learning how to use datetime, if-statements, DataFrames, and more.",
         "img": "certificates/intermediate_python_finance.png",
         "link": "https://www.datacamp.com/statement-of-accomplishment/course/d9da4bc3d26ac238a1445cd7208e4c0c35935b52?raw=1"
+    },
+    {
+        "name": "Developing LLM Applications with LangChain",
+        "desc": "Discover how to build AI-powered applications using LLMs, prompts, chains, and agents in Langchain.",
+        "img": "certificates/developing_llm_langchain.png",
+        "link": "https://www.datacamp.com/statement-of-accomplishment/course/1c47484d93379a2821b49d5b121bad4962a9b010?raw=1"
+    },
+    {
+        "name": "Retrieval Augmented Generation (RAG) with LangChain",
+        "desc": "Learn cutting-edge methods for integrating external data with LLMs using Retrieval Augmented Generation (RAG) with LangChain.",
+        "img": "certificates/rag_langchain.png",
+        "link": "https://www.datacamp.com/statement-of-accomplishment/course/630d8130c29b41469163b0e84793bc1a38979ed9?raw=1"
+    },
+    {
+        "name": "Designing Agentic Systems with LangChain",
+        "desc": "Get to grips with the foundational components of LangChain agents and build custom chat agents",
+        "img": "certificates/agentic_systems_langchain.png",
+        "link": "https://www.datacamp.com/statement-of-accomplishment/course/de3398b1042a4740439189b48755f3ecf513d45a?raw=1"
     }
 ]
