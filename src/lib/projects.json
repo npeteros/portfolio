@@ -18,6 +18,18 @@
         "link": "https://thearchdioceseofcebu.com/"
     },
     {
+        "name": "AuditPH",
+        "desc": "AuditPH is an intuitive and powerful AI-powered expense tracker web application designed for small businesses and individuals to manage finances effortlessly. Stop juggling spreadsheets—track cash, banks, and e-wallets in one unified dashboard with instant insights and smart categorization.",
+        "img": "https://i.imgur.com/vGGqNR0.png",
+        "link": "https://auditph.vercel.app/"
+    },
+    {
+        "name": "Outfit PH",
+        "desc": "A modern simplistic website developed for Outfit Construction Inc., a company specializing in condo fit-outs, studios, offices, shops, and cafes, as well as renovations, furniture, cabinets, and smart device installations. Built using Next.js, the website showcases the company's services, portfolio of completed projects, client testimonials, and contact information. Successfully deployed and actively maintained, the website serves as a digital presence for Outfit Construction Inc., helping to attract new clients and showcase their expertise in the construction and fit-out industry.",
+        "img": "https://i.imgur.com/UD0ltj4.png",
+        "link": "https://outfit.ph/"
+    },
+    {
         "name": "KidneyPal PH",
         "desc": "A comprehensive research website developed for a client as part of an academic study exploring the quality of life of patients with Chronic Kidney Disease (CKD) undergoing hemodialysis. As the Web Developer, I built this platform using WordPress to showcase research findings across physical, psychological, social, and environmental well-being dimensions. The website features downloadable research papers, dedicated resource sections for both patients and healthcare providers, interactive contact forms, and community forums for guests. Successfully deployed and serving CKD patients, researchers, healthcare professionals, and the general public, KidneyPal PH provides valuable insights and resources for understanding and improving the lives of those affected by chronic kidney disease.",
         "img": "https://i.imgur.com/jTvJA88.png",
@@ -34,12 +46,6 @@
         "desc": "A single-page website developed through Wordpress for a client, featuring her services, customer feedback, student reviews and accomplishments, as well as mail integration in a contact form.",
         "img": "https://i.imgur.com/oiJOQ9z.png",
         "link": "https://teachonlinepiano.com/"
-    },
-    {
-        "name": "AuditPH (inactive)",
-        "desc": "Designed to promote financial literacy and responsibility by providing users with effective financial management tools, AuditPH helps users track their financial goals, budgets, transactions, and generates comprehensive analytics and financial reports based on user activity.",
-        "img": "https://i.imgur.com/JWSHC5e.png",
-        "link": "https://auditph.vercel.app/"
     },
     {
         "name": "The Mandara Spa (inactive)",
