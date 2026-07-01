@@ -9,6 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import skillset from "./lib/skills.json";
 import projectset from "./lib/projects.json";
 import certificates from "./lib/certificates.json";
+import experienceset from "./lib/experience.json";
 import { scrollTo } from "./lib/utils";
 import { Link } from "react-router-dom";
 import ScrollReveal from "scrollreveal";
@@ -20,7 +21,14 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const pages = ["home", "about", "skills", "certificates", "projects"];
+const pages = [
+  "home",
+  "about",
+  "experience",
+  "skills",
+  "certificates",
+  "projects",
+];
 
 function NavLink({
   children,
@@ -75,6 +83,13 @@ interface Certificate {
   link: string;
 }
 
+interface Experience {
+  role: string;
+  company: string;
+  period: string;
+  points: string[];
+}
+
 function TechStack({ tech }: { tech: TechStack[] }) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   return tech.map((t, idx) => (
@@ -109,6 +124,30 @@ function TechStack({ tech }: { tech: TechStack[] }) {
       </div>
     </Link>
   ));
+}
+
+function Experience({ experience }: { experience: Experience[] }) {
+  return (
+    <div className="flex flex-col gap-8 border-l-2 border-neutral-700 pl-6 md:pl-10">
+      {experience.map((e) => (
+        <div key={`${e.company}-${e.role}`} className="relative">
+          <span className="absolute -left-[31px] md:-left-[47px] top-1.5 w-3 h-3 rounded-full bg-carnelian-red" />
+          <div className="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+            <p className="text-white text-xl font-bold">{e.role}</p>
+            <p className="text-neutral-400 text-sm">{e.period}</p>
+          </div>
+          <p className="text-carnelian-red font-semibold mb-2">{e.company}</p>
+          <ul className="list-disc list-outside pl-5 flex flex-col gap-1">
+            {e.points.map((point) => (
+              <li key={point} className="text-white text-justify leading-relaxed">
+                {point}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
 }
 
 function Projects({ projects }: { projects: Project[] }) {
@@ -185,6 +224,8 @@ export default function App() {
 
   const projects: Project[] = projectset;
 
+  const experience: Experience[] = experienceset;
+
   const [activeSection, setActiveSection] = useState<string | null>("");
 
   const handleScroll = () => {
@@ -210,6 +251,7 @@ export default function App() {
 
     scroll.reveal("#home");
     scroll.reveal("#about");
+    scroll.reveal("#experience");
     scroll.reveal("#skills");
     scroll.reveal("#projects");
     scroll.reveal("#certificates");
@@ -443,6 +485,32 @@ export default function App() {
                   </Link>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        <section className="min-h-screen py-8 md:pb-24" id="experience">
+          <div className="max-w-2xl md:max-w-6xl w-full mx-auto flex flex-col md:justify-between">
+            <div className="flex justify-center items-center gap-4 gap">
+              <svg
+                width="32"
+                height="32"
+                fill="none"
+                stroke="#ffffff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M20 7h-3V5a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2Z"></path>
+                <path d="M9 5h6v2H9V5Z"></path>
+              </svg>
+              <p className="text-white text-4xl font-bold text-center">
+                Work Experience
+              </p>
+            </div>
+            <div className="mx-4 md:mx-6 py-10" id="content">
+              <Experience experience={experience} />
             </div>
           </div>
         </section>

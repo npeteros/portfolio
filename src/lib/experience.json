@@ -1,0 +1,35 @@
+[
+    {
+        "role": "Part-Time Software Engineer",
+        "company": "Adobo Super Software Inc.",
+        "period": "March 2026 – Present",
+        "points": [
+            "Develop and maintain cloud-based ERP web applications for inventory, order, and sales management, streamlining daily operations for client businesses.",
+            "Implement new features, resolve defects, and optimize performance to improve system reliability and user experience.",
+            "Collaborate with engineers, designers, and product stakeholders in an agile environment to deliver scalable enterprise solutions.",
+            "Contribute across frontend and backend development using modern web technologies, following clean coding standards, code reviews, and testing practices."
+        ]
+    },
+    {
+        "role": "Project Manager & Deputy Chief Technology Officer",
+        "company": "Today's Carolinian",
+        "period": "September 2023 – Present",
+        "points": [
+            "Lead project management and full-stack development for a ~15-person Web Development team, overseeing planning, delegation, and delivery across multiple applications.",
+            "Build and maintain projects using Next.js, Supabase, and Tailwind CSS, balancing scalability with performance.",
+            "Own stakeholder communication and cross-team coordination to meet tight deadlines and shifting requirements.",
+            "Delivered a university-wide platform for annual intramurals, receiving positive feedback from stakeholders."
+        ]
+    },
+    {
+        "role": "Full-Stack Software Developer",
+        "company": "Freelance",
+        "period": "September 2024 – January 2025",
+        "points": [
+            "Developed custom web-based software tailored to client needs, improving customer engagement and business efficiency.",
+            "Secured projects through referrals and maintained strong, long-term client relationships.",
+            "Worked across Next.js, Supabase/Firebase, Prisma, Laravel, MySQL, and React Inertia stacks depending on client requirements.",
+            "Completed 4 client projects, helping businesses increase customer traffic and online presence."
+        ]
+    }
+]
