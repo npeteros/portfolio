@@ -1,9 +1,15 @@
 [
     {
-        "name": "USC Days 2024 Scoreboard",
-        "desc": "A score tracking web application developed for the University of San Carlos' annual intramurals (USC Days 2024), ensuring efficient management of sports event scores, game schedules, and rankings. Built using Next.js, Supabase, Prisma ORM, Tailwind CSS, and Zustand, the application features user authentication, score updates, game scheduling, and admin management. Successfully launched and used by the entire university, it is now an annual tool for USC Days, ensuring seamless and organized score tracking for future events.",
+        "name": "USC Days Scoreboard",
+        "desc": "A score tracking web application developed for the University of San Carlos' annual intramurals, ensuring efficient management of sports event scores, game schedules, and rankings. Built using Next.js, Supabase, Prisma ORM, Tailwind CSS, and Zustand, the application features user authentication, score updates, game scheduling, and admin management. Successfully launched and used by the entire university, it is now an annual tool for USC Days, ensuring seamless and organized score tracking for future events.",
         "img": "https://i.imgur.com/zWt0Cv2.png",
         "link": "https://uscdays.todayscarolinian.com/"
+    },
+    {
+        "name": "TC Herald",
+        "desc": "Herald is Today's Carolinian's centralized Identity Provider (IdP), implementing Single Sign-On (SSO) across the entire TC ecosystem, including the main site, Digital Archives, and USC Days Scoreboard. Architected as a Turborepo monorepo, it pairs a Next.js 16 frontend with a Hono.js authentication microservice powered by BetterAuth, Cloud Firestore, and Vercel KV (Redis), with Resend handling transactional email. The system provides secure cross-subdomain session sharing, position-based access control (ABAC) restricting user management to six editorial and technical roles, an admin dashboard for user CRUD and bulk CSV import, and email verification with auto-login on confirmation. Built to replace fragmented logins across TC's growing suite of applications, Herald centralizes authentication and authorization into a single secure, scalable identity platform.",
+        "img": "https://i.imgur.com/uNl7sLF.png",
+        "link": "https://herald.todayscarolinian.com"
     },
     {
         "name": "Digital Archives - Todays Carolinian",
@@ -18,10 +24,10 @@
         "link": "https://thearchdioceseofcebu.com/"
     },
     {
-        "name": "AuditPH",
-        "desc": "AuditPH is an intuitive and powerful AI-powered expense tracker web application designed for small businesses and individuals to manage finances effortlessly. Stop juggling spreadsheets—track cash, banks, and e-wallets in one unified dashboard with instant insights and smart categorization.",
-        "img": "https://i.imgur.com/vGGqNR0.png",
-        "link": "https://auditph.vercel.app/"
+        "name": "MARIE",
+        "desc": "MARIE (My AI Recordkeeper for Income & Expenses) is a personal finance progressive web app built for Filipino households, tracking income, expenses, budgets, savings goals, and debts. Built using Next.js 16, Prisma on PostgreSQL (Supabase), Better Auth, TanStack Query, and Tailwind CSS, the application features a chat-based AI advisor that answers questions about your finances and can create, update, or delete records via tool calling, plus an AI text/receipt scanner that automatically extracts transaction details from a pasted line or receipt. It supports email/password and Google sign-in with account linking, along with a full password reset flow. An ongoing personal project, MARIE aims to make everyday budgeting and expense tracking effortless for Filipino users.",
+        "img": "",
+        "link": "https://marie-tracker.vercel.app"
     },
     {
         "name": "Outfit PH",
@@ -30,27 +36,9 @@
         "link": "https://outfit.ph/"
     },
     {
-        "name": "KidneyPal PH",
-        "desc": "A comprehensive research website developed for a client as part of an academic study exploring the quality of life of patients with Chronic Kidney Disease (CKD) undergoing hemodialysis. As the Web Developer, I built this platform using WordPress to showcase research findings across physical, psychological, social, and environmental well-being dimensions. The website features downloadable research papers, dedicated resource sections for both patients and healthcare providers, interactive contact forms, and community forums for guests. Successfully deployed and serving CKD patients, researchers, healthcare professionals, and the general public, KidneyPal PH provides valuable insights and resources for understanding and improving the lives of those affected by chronic kidney disease.",
-        "img": "https://i.imgur.com/jTvJA88.png",
-        "link": "https://kidneypalph.com/"
-    },
-    {
-        "name": "World of Darkness Roleplay",
-        "desc": "A frontend web application currently under development for a client, designed to showcase the features of the World of Darkness roleplaying game. Built using Next.js, Tailwind CSS, Flowbite, and ShadCN, the application serves as a game feature showcase. In the future, it will evolve into a full-stack application with an announcement hub for game updates and a user control panel allowing players to manage and edit their characters. The project is an ongoing work in progress, with deployment planned once full functionality is implemented.",
-        "img": "https://i.imgur.com/PgFdmDb.png",
-        "link": "https://wod-rp.vercel.app/"
-    },
-    {
         "name": "Teach Online Piano",
         "desc": "A single-page website developed through Wordpress for a client, featuring her services, customer feedback, student reviews and accomplishments, as well as mail integration in a contact form.",
         "img": "https://i.imgur.com/oiJOQ9z.png",
         "link": "https://teachonlinepiano.com/"
-    },
-    {
-        "name": "The Mandara Spa (inactive)",
-        "desc": "The Mandara Spa Web Application is a fully functional booking and management platform for The Mandara Spa in the Philippines, designed to streamline appointment scheduling, user management, and branch-specific service administration. As the Project Manager and Full-Stack Developer, I built the application using Next.js, Supabase, Prisma ORM, Vercel, and Tailwind CSS, implementing user authentication, a dynamic landing page, and an inheritance-based service structure that allows treatments to vary across branches. The application is successfully deployed on Vercel as a personal project, with potential for real-world adoption.",
-        "img": "https://i.imgur.com/pgpXpoq.png",
-        "link": "https://themandaraspa.vercel.app/"
     }
 ]

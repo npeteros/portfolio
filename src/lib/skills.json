@@ -103,7 +103,7 @@
     },
     {
         "name": "TailwindCSS",
-        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/48px-Tailwind_CSS_Logo.png",
+        "icon": "skills/tailwind.png",
         "link": "https://tailwindcss.com/",
         "rating": 9
     },
@@ -166,5 +166,17 @@
         "icon": "skills/n8n.png",
         "link": "https://n8n.io/",
         "rating": 8
+    },
+    {
+        "name": "OpenAI API",
+        "icon": "skills/openai.png",
+        "link": "https://platform.openai.com/docs/api-reference",
+        "rating": 8
+    },
+    {
+        "name": "Next.js",
+        "icon": "skills/nextjs.png",
+        "link": "https://nextjs.org/",
+        "rating": 9
     }
 ]
