@@ -20,6 +20,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Github, Globe } from "lucide-react";
 
 const pages = [
   "home",
@@ -74,6 +75,7 @@ interface Project {
   desc: string;
   img: string;
   link: string;
+  github: string;
 }
 
 interface Certificate {
@@ -152,11 +154,10 @@ function Experience({ experience }: { experience: Experience[] }) {
 
 function Projects({ projects }: { projects: Project[] }) {
   return projects.map((p) => (
-    <div>
+    <div key={p.name}>
       <Link
         to={p.link}
         target="_blank"
-        key={p.name}
         className="h-full flex flex-col gap-4 items-center justify-center"
       >
         <img
@@ -167,6 +168,26 @@ function Projects({ projects }: { projects: Project[] }) {
           src={p.img}
         />
       </Link>
+      <div className="flex items-center justify-center gap-4 py-2">
+        <a
+          href={p.link}
+          target="_blank"
+          rel="noreferrer"
+          className="flex items-center gap-1 text-white/80 hover:text-white text-sm"
+        >
+          <Globe size={16} />
+          Website
+        </a>
+        <a
+          href={p.github}
+          target="_blank"
+          rel="noreferrer"
+          className="flex items-center gap-1 text-white/80 hover:text-white text-sm"
+        >
+          <Github size={16} />
+          GitHub
+        </a>
+      </div>
       <Accordion type="single" collapsible className="w-full">
         <AccordionItem value="item-1" className="text-white">
           <AccordionTrigger>{p.name}</AccordionTrigger>

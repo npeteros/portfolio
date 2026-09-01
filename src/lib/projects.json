@@ -2,43 +2,43 @@
     {
         "name": "USC Days Scoreboard",
         "desc": "A score tracking web application developed for the University of San Carlos' annual intramurals, ensuring efficient management of sports event scores, game schedules, and rankings. Built using Next.js, Supabase, Prisma ORM, Tailwind CSS, and Zustand, the application features user authentication, score updates, game scheduling, and admin management. Successfully launched and used by the entire university, it is now an annual tool for USC Days, ensuring seamless and organized score tracking for future events.",
-        "img": "https://i.imgur.com/zWt0Cv2.png",
-        "link": "https://uscdays.todayscarolinian.com/"
+        "img": "/projects/usc-days.png",
+        "link": "https://uscdays.todayscarolinian.com/",
+        "github": "https://github.com/todayscarolinian/usc-days"
     },
     {
         "name": "TC Herald",
         "desc": "Herald is Today's Carolinian's centralized Identity Provider (IdP), implementing Single Sign-On (SSO) across the entire TC ecosystem, including the main site, Digital Archives, and USC Days Scoreboard. Architected as a Turborepo monorepo, it pairs a Next.js 16 frontend with a Hono.js authentication microservice powered by BetterAuth, Cloud Firestore, and Vercel KV (Redis), with Resend handling transactional email. The system provides secure cross-subdomain session sharing, position-based access control (ABAC) restricting user management to six editorial and technical roles, an admin dashboard for user CRUD and bulk CSV import, and email verification with auto-login on confirmation. Built to replace fragmented logins across TC's growing suite of applications, Herald centralizes authentication and authorization into a single secure, scalable identity platform.",
-        "img": "https://i.imgur.com/uNl7sLF.png",
-        "link": "https://herald.todayscarolinian.com"
+        "img": "/projects/herald.png",
+        "link": "https://herald.todayscarolinian.com",
+        "github": "https://github.com/todayscarolinian/herald"
     },
     {
         "name": "Digital Archives - Todays Carolinian",
         "desc": "A digital archive web application developed for the University of San Carlos' official student publication, The Todays Carolinian. This application serves as a repository for the publication's historical issues, allowing users to search and access past articles. Built using Next.js, Supabase, Prisma ORM, and Tailwind CSS, it features user authentication, admin-restricted issue management, and a user-friendly interface for browsing archives. Successfully launched and used by the entire university, it is now an essential tool for preserving and accessing the publication's rich history.",
-        "img": "https://i.imgur.com/N97zde7.png",
-        "link": "https://archives.todayscarolinian.com/"
+        "img": "/projects/archives.png",
+        "link": "https://archives.todayscarolinian.com/",
+        "github": "https://github.com/todayscarolinian/tc-archive"
     },
     {
         "name": "The Roman Catholic Archdiocese of Cebu - Official Website",
         "desc": "The official website for The Roman Catholic Archdiocese of Cebu, developed from scratch as a volunteer project. As the Lead Developer and Project Manager, I built this comprehensive platform using WordPress under the approval and guidance of the official Roman Catholic Archdiocese and its digital team, CADComM, to serve the Catholic faithful in Cebu, clergy, and visitors seeking information. The website features a dynamic announcements section, Circulars and Memoranda repository, news features, multimedia galleries showcasing photos and videos, interactive contact forms, and complete directories of the archdiocese's clergy and bishops, parishes and shrines, and institutions. Successfully deployed and actively maintained, this platform serves as the central digital hub for one of the Philippines' most significant Catholic archdioceses, facilitating communication and engagement within the faith community.",
-        "img": "https://i.imgur.com/cMjfgxv.jpeg",
-        "link": "https://thearchdioceseofcebu.com/"
-    },
-    {
-        "name": "MARIE",
-        "desc": "MARIE (My AI Recordkeeper for Income & Expenses) is a personal finance progressive web app built for Filipino households, tracking income, expenses, budgets, savings goals, and debts. Built using Next.js 16, Prisma on PostgreSQL (Supabase), Better Auth, TanStack Query, and Tailwind CSS, the application features a chat-based AI advisor that answers questions about your finances and can create, update, or delete records via tool calling, plus an AI text/receipt scanner that automatically extracts transaction details from a pasted line or receipt. It supports email/password and Google sign-in with account linking, along with a full password reset flow. An ongoing personal project, MARIE aims to make everyday budgeting and expense tracking effortless for Filipino users.",
-        "img": "",
-        "link": "https://marie-tracker.vercel.app"
+        "img": "/projects/rcac.png",
+        "link": "https://thearchdioceseofcebu.com/",
+        "github": "#"
     },
     {
         "name": "Outfit PH",
         "desc": "A modern simplistic website developed for Outfit Construction Inc., a company specializing in condo fit-outs, studios, offices, shops, and cafes, as well as renovations, furniture, cabinets, and smart device installations. Built using Next.js, the website showcases the company's services, portfolio of completed projects, client testimonials, and contact information. Successfully deployed and actively maintained, the website serves as a digital presence for Outfit Construction Inc., helping to attract new clients and showcase their expertise in the construction and fit-out industry.",
-        "img": "https://i.imgur.com/UD0ltj4.png",
-        "link": "https://outfit.ph/"
+        "img": "/projects/outfit.png",
+        "link": "https://outfit.ph/",
+        "github": "https://github.com/devnest-dev/outfit"
     },
     {
         "name": "Teach Online Piano",
         "desc": "A single-page website developed through Wordpress for a client, featuring her services, customer feedback, student reviews and accomplishments, as well as mail integration in a contact form.",
-        "img": "https://i.imgur.com/oiJOQ9z.png",
-        "link": "https://teachonlinepiano.com/"
+        "img": "/projects/teach-online-piano.png",
+        "link": "https://teachonlinepiano.com/",
+        "github": "#"
     }
 ]
