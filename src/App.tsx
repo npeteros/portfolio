@@ -20,7 +20,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Github, Globe, Mail } from "lucide-react";
+import { Github, Globe, Mail, Sun, Moon } from "lucide-react";
 
 const pages = [
   "home",
@@ -58,10 +58,28 @@ function SocialLink({
 }) {
   return (
     <Link to={href} target="_blank">
-      <button className="w-10 h-10 rounded-full border-2 grid place-items-center bg-transparent hover:bg-neutral-800 hover:-translate-y-1 hover:scale-100 focus:-translate-y-1 focus:scale-100 focus:outline-none">
+      <button className="w-10 h-10 rounded-full border-2 border-black/30 dark:border-white/30 grid place-items-center bg-transparent text-neutral-900 dark:text-white hover:bg-neutral-200 dark:hover:bg-neutral-800 hover:-translate-y-1 hover:scale-100 focus:-translate-y-1 focus:scale-100 focus:outline-none">
         {children}
       </button>
     </Link>
+  );
+}
+
+function ThemeToggle({
+  theme,
+  setTheme,
+}: {
+  theme: "light" | "dark";
+  setTheme: (theme: "light" | "dark") => void;
+}) {
+  return (
+    <button
+      aria-label="Toggle dark mode"
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      className="w-10 h-10 rounded-full border-2 border-black/30 dark:border-white/30 grid place-items-center bg-transparent text-neutral-900 dark:text-white hover:bg-neutral-200 dark:hover:bg-neutral-800 hover:-translate-y-1 hover:scale-100 focus:-translate-y-1 focus:scale-100 focus:outline-none"
+    >
+      {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+    </button>
   );
 }
 
@@ -108,7 +126,7 @@ function TechStack({ tech }: { tech: TechStack[] }) {
       <AnimatePresence>
         {hoveredIndex === idx && (
           <motion.span
-            className="absolute inset-0 h-full w-28 lg:w-48 bg-neutral-800 block rounded-3xl"
+            className="absolute inset-0 h-full w-28 lg:w-48 bg-neutral-200 dark:bg-neutral-800 block rounded-3xl"
             layoutId="hoverBackground"
             initial={{ opacity: 0 }}
             animate={{
@@ -122,7 +140,7 @@ function TechStack({ tech }: { tech: TechStack[] }) {
           />
         )}
       </AnimatePresence>
-      <div className="flex flex-col justify-center items-center w-24 h-24 lg:w-44 lg:h-32 text-white bg-neutral-700 gap-2 rounded-lg border border-white/[0.2] group-hover:border-neutral-700 relative z-20">
+      <div className="flex flex-col justify-center items-center w-24 h-24 lg:w-44 lg:h-32 text-neutral-900 dark:text-white bg-neutral-200 dark:bg-neutral-700 gap-2 rounded-lg border border-black/[0.1] dark:border-white/[0.2] group-hover:border-neutral-300 dark:group-hover:border-neutral-700 relative z-20">
         <img src={t.icon} alt={t.name} className="max-w-12 relative z-20" />
         <div className="font-bold text-md md:text-lg z-50">{t.name}</div>
       </div>
@@ -132,18 +150,18 @@ function TechStack({ tech }: { tech: TechStack[] }) {
 
 function Experience({ experience }: { experience: Experience[] }) {
   return (
-    <div className="flex flex-col gap-8 border-l-2 border-neutral-700 pl-6 md:pl-10">
+    <div className="flex flex-col gap-8 border-l-2 border-neutral-300 dark:border-neutral-700 pl-6 md:pl-10">
       {experience.map((e) => (
         <div key={`${e.company}-${e.role}`} className="relative">
           <span className="absolute -left-[31px] md:-left-[47px] top-1.5 w-3 h-3 rounded-full bg-carnelian-red" />
           <div className="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
-            <p className="text-white text-xl font-bold">{e.role}</p>
-            <p className="text-neutral-400 text-sm">{e.period}</p>
+            <p className="text-neutral-900 dark:text-white text-xl font-bold">{e.role}</p>
+            <p className="text-neutral-500 dark:text-neutral-400 text-sm">{e.period}</p>
           </div>
           <p className="text-carnelian-red font-semibold mb-2">{e.company}</p>
           <ul className="list-disc list-outside pl-5 flex flex-col gap-1">
             {e.points.map((point) => (
-              <li key={point} className="text-white text-justify leading-relaxed">
+              <li key={point} className="text-neutral-900 dark:text-white text-justify leading-relaxed">
                 {point}
               </li>
             ))}
@@ -175,7 +193,7 @@ function Projects({ projects }: { projects: Project[] }) {
           href={p.link}
           target="_blank"
           rel="noreferrer"
-          className="flex items-center gap-1 text-white/80 hover:text-white text-sm"
+          className="flex items-center gap-1 text-neutral-600 dark:text-white/80 hover:text-neutral-900 dark:hover:text-white text-sm"
         >
           <Globe size={16} />
           Website
@@ -184,7 +202,7 @@ function Projects({ projects }: { projects: Project[] }) {
           href={p.github}
           target="_blank"
           rel="noreferrer"
-          className="flex items-center gap-1 text-white/80 hover:text-white text-sm"
+          className="flex items-center gap-1 text-neutral-600 dark:text-white/80 hover:text-neutral-900 dark:hover:text-white text-sm"
         >
           <Github size={16} />
           GitHub
@@ -194,14 +212,14 @@ function Projects({ projects }: { projects: Project[] }) {
         {p.tech.map((t) => (
           <span
             key={t}
-            className="rounded-full border border-white/[0.2] bg-neutral-800 px-3 py-1 text-xs text-white/80"
+            className="rounded-full border border-black/[0.1] dark:border-white/[0.2] bg-neutral-100 dark:bg-neutral-800 px-3 py-1 text-xs text-neutral-600 dark:text-white/80"
           >
             {t}
           </span>
         ))}
       </div>
       <Accordion type="single" collapsible className="w-full">
-        <AccordionItem value="item-1" className="text-white">
+        <AccordionItem value="item-1" className="text-neutral-900 dark:text-white">
           <AccordionTrigger>{p.name}</AccordionTrigger>
           <AccordionContent>{p.desc}</AccordionContent>
         </AccordionItem>
@@ -240,7 +258,7 @@ function Certificates({ certificates }: { certificates: Certificate[] }) {
           </a>
         ))}
       </Carousel>
-      <div className="flex w-full md:w-2/3 flex-col gap-2 text-center text-white">
+      <div className="flex w-full md:w-2/3 flex-col gap-2 text-center text-neutral-900 dark:text-white">
         <span className="text-lg font-bold">
           {certificates[activeIndex].name}
         </span>
@@ -275,7 +293,7 @@ function Contact() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="rounded-xl bg-emerald-800/80 border border-emerald-500 text-white text-center py-3 px-4"
+            className="rounded-xl bg-emerald-600/90 dark:bg-emerald-800/80 border border-emerald-500 text-white text-center py-3 px-4"
           >
             Message sent! I'll get back to you soon.
           </motion.div>
@@ -289,7 +307,7 @@ function Contact() {
           placeholder="Your Name"
           value={form.name}
           onChange={handleChange}
-          className="rounded-xl bg-neutral-800 border border-white/[0.2] text-white placeholder:text-neutral-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-carnelian-red"
+          className="rounded-xl bg-neutral-100 dark:bg-neutral-800 border border-black/[0.1] dark:border-white/[0.2] text-neutral-900 dark:text-white placeholder:text-neutral-500 dark:placeholder:text-neutral-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-carnelian-red"
         />
         <input
           type="email"
@@ -298,7 +316,7 @@ function Contact() {
           placeholder="Your Email"
           value={form.email}
           onChange={handleChange}
-          className="rounded-xl bg-neutral-800 border border-white/[0.2] text-white placeholder:text-neutral-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-carnelian-red"
+          className="rounded-xl bg-neutral-100 dark:bg-neutral-800 border border-black/[0.1] dark:border-white/[0.2] text-neutral-900 dark:text-white placeholder:text-neutral-500 dark:placeholder:text-neutral-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-carnelian-red"
         />
         <textarea
           name="message"
@@ -307,7 +325,7 @@ function Contact() {
           placeholder="Your Message"
           value={form.message}
           onChange={handleChange}
-          className="rounded-xl bg-neutral-800 border border-white/[0.2] text-white placeholder:text-neutral-400 px-4 py-3 resize-none focus:outline-none focus:ring-2 focus:ring-carnelian-red"
+          className="rounded-xl bg-neutral-100 dark:bg-neutral-800 border border-black/[0.1] dark:border-white/[0.2] text-neutral-900 dark:text-white placeholder:text-neutral-500 dark:placeholder:text-neutral-400 px-4 py-3 resize-none focus:outline-none focus:ring-2 focus:ring-carnelian-red"
         />
         <button
           type="submit"
@@ -318,7 +336,7 @@ function Contact() {
       </form>
       <a
         href="mailto:n.peteros2003@gmail.com"
-        className="flex items-center justify-center gap-2 text-white/80 hover:text-white text-sm"
+        className="flex items-center justify-center gap-2 text-neutral-600 dark:text-white/80 hover:text-neutral-900 dark:hover:text-white text-sm"
       >
         <Mail size={16} />
         or email me directly
@@ -337,6 +355,15 @@ export default function App() {
   const experience: Experience[] = experienceset;
 
   const [activeSection, setActiveSection] = useState<string | null>("");
+
+  const [theme, setTheme] = useState<"light" | "dark">(
+    () => (localStorage.getItem("theme") as "light" | "dark" | null) ?? "dark"
+  );
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   const handleScroll = () => {
     document.querySelectorAll("section").forEach((section) => {
@@ -380,23 +407,28 @@ export default function App() {
 
   return (
     <>
-      <div className="bg-neutral-900 min-h-screen font-['Times_New_Roman']">
-        <div className="fixed z-30 w-full backdrop-blur-sm">
+      <div className="bg-white dark:bg-neutral-900 min-h-screen font-['Times_New_Roman']">
+        <div className="fixed z-30 w-full backdrop-blur-sm bg-white/70 dark:bg-neutral-900/70">
           <div className="max-w-md mx-6 md:max-w-3xl md:mx-auto lg:max-w-7xl w-full py-4 flex justify-between align-center">
             <a href="/" className="text-4xl text-carnelian-red font-bold">
               peterosJS
             </a>
-            <div className="hidden md:flex align-center gap-8 text-white text-xl">
-              {pages.map((p) => (
-                <NavLink
-                  key={p}
-                  className={
-                    activeSection == p ? "text-white" : "text-neutral-500"
-                  }
-                >
-                  {p}
-                </NavLink>
-              ))}
+            <div className="flex items-center gap-4 md:gap-8">
+              <div className="hidden md:flex align-center gap-8 text-neutral-900 dark:text-white text-xl">
+                {pages.map((p) => (
+                  <NavLink
+                    key={p}
+                    className={
+                      activeSection == p
+                        ? "text-neutral-900 dark:text-white"
+                        : "text-neutral-500"
+                    }
+                  >
+                    {p}
+                  </NavLink>
+                ))}
+              </div>
+              <ThemeToggle theme={theme} setTheme={setTheme} />
             </div>
           </div>
         </div>
@@ -409,7 +441,7 @@ export default function App() {
                   id="content"
                 >
                   <div className="flex flex-col gap-2">
-                    <p className="text-center md:text-left text-2xl md:text-3xl font-bold text-white">
+                    <p className="text-center md:text-left text-2xl md:text-3xl font-bold text-neutral-900 dark:text-white">
                       Hello, I'm
                     </p>
                     <p className="text-center md:text-left text-5xl md:text-6xl font-bold text-carnelian-red">
@@ -417,11 +449,11 @@ export default function App() {
                     </p>
                   </div>
                   <div
-                    className="w-4/5 mx-auto md:mx-0 text-center md:w-2/3 md:text-left md:text-lg text-white"
+                    className="w-4/5 mx-auto md:mx-0 text-center md:w-2/3 md:text-left md:text-lg text-neutral-900 dark:text-white"
                     id="content-2"
                   >
                     An ambitious
-                    <FlipWords words={words} className="text-white" />
+                    <FlipWords words={words} className="text-neutral-900 dark:text-white" />
                     developer with a passion for learning and innovation.
                   </div>
                   <div className="w-5/6 mx-auto md:mx-0 md:w-2/2 lg:w-1/2 flex flex-wrap md:flex-nowrap justify-between gap-4">
@@ -438,7 +470,7 @@ export default function App() {
                       Contact Now
                     </button>
                     <button
-                      className="rounded-xl bg-transparent border-2 text-white text-center w-full py-4 hover:-translate-y-1 hover:scale-100 focus:-translate-y-1 focus:scale-100"
+                      className="rounded-xl bg-transparent border-2 border-black/30 dark:border-white/30 text-neutral-900 dark:text-white text-center w-full py-4 hover:-translate-y-1 hover:scale-100 focus:-translate-y-1 focus:scale-100"
                       onClick={() =>
                         document.getElementById("about")?.scrollIntoView({
                           block: "start",
@@ -460,7 +492,7 @@ export default function App() {
                       width="18"
                       height="18"
                       fill="none"
-                      stroke="#ffffff"
+                      stroke="currentColor"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
@@ -476,7 +508,7 @@ export default function App() {
                       width="18"
                       height="18"
                       fill="none"
-                      stroke="#ffffff"
+                      stroke="currentColor"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
@@ -495,7 +527,7 @@ export default function App() {
                       width="18"
                       height="18"
                       fill="none"
-                      stroke="#ffffff"
+                      stroke="currentColor"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
@@ -527,9 +559,10 @@ export default function App() {
               <svg
                 width="32"
                 height="32"
-                fill="#ffffff"
+                fill="currentColor"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
+                className="text-neutral-900 dark:text-white"
               >
                 <path
                   fillRule="evenodd"
@@ -537,7 +570,7 @@ export default function App() {
                   clipRule="evenodd"
                 ></path>
               </svg>
-              <p className="text-white text-4xl font-bold text-center">
+              <p className="text-neutral-900 dark:text-white text-4xl font-bold text-center">
                 About Me
               </p>
             </div>
@@ -546,7 +579,7 @@ export default function App() {
               id="content"
             >
               <CardContainer>
-                <CardBody className="bg-neutral-800 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-8 border">
+                <CardBody className="bg-neutral-100 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-8 border">
                   <CardItem translateZ="100" className="w-full mt-4">
                     <img
                       src="spidey-me.jpg"
@@ -563,14 +596,14 @@ export default function App() {
               >
                 <div className="flex flex-col gap-4">
                   <div className="flex flex-col mx-4">
-                    <p className="text-white text-2xl font-bold">
+                    <p className="text-neutral-900 dark:text-white text-2xl font-bold">
                       Neal Andrew B. Peteros
                     </p>
-                    <p className="text-white text-lg">
+                    <p className="text-neutral-900 dark:text-white text-lg">
                       Full-Stack Web Developer
                     </p>
                   </div>
-                  <p className="text-white leading-loose text-justify mx-4">
+                  <p className="text-neutral-900 dark:text-white leading-loose text-justify mx-4">
                     I'm a full-stack developer from Cebu, Philippines. I am an
                     Information Technology undergraduate from the University of
                     San Carlos. I have grown a passion for developing dynamic
@@ -586,7 +619,7 @@ export default function App() {
                         width="18"
                         height="18"
                         fill="none"
-                        stroke="#ffffff"
+                        stroke="currentColor"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth="2"
@@ -609,17 +642,18 @@ export default function App() {
                 width="32"
                 height="32"
                 fill="none"
-                stroke="#ffffff"
+                stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
+                className="text-neutral-900 dark:text-white"
               >
                 <path d="M20 7h-3V5a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2Z"></path>
                 <path d="M9 5h6v2H9V5Z"></path>
               </svg>
-              <p className="text-white text-4xl font-bold text-center">
+              <p className="text-neutral-900 dark:text-white text-4xl font-bold text-center">
                 Work Experience
               </p>
             </div>
@@ -629,12 +663,12 @@ export default function App() {
           </div>
         </section>
         <section className="min-h-screen py-0 md:pb-24" id="skills">
-          <div className="max-w-6xl bg-neutral-900 mx-auto px-8 rounded-lg">
-            <div className="flex items-center justify-center gap-4 text-center text-white text-4xl font-bold pt-12 tracking-wider">
+          <div className="max-w-6xl bg-white dark:bg-neutral-900 mx-auto px-8 rounded-lg">
+            <div className="flex items-center justify-center gap-4 text-center text-neutral-900 dark:text-white text-4xl font-bold pt-12 tracking-wider">
               <svg
                 width="32"
                 height="32"
-                fill="#ffffff"
+                fill="currentColor"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -655,12 +689,12 @@ export default function App() {
           </div>
         </section>
         <section className="min-h-screen py-0 md:pb-24" id="certificates">
-          <div className="max-w-6xl bg-neutral-900 mx-auto px-8 rounded-lg">
-            <div className="flex items-center justify-center gap-4 text-center text-white text-4xl font-bold pt-12 tracking-wider">
+          <div className="max-w-6xl bg-white dark:bg-neutral-900 mx-auto px-8 rounded-lg">
+            <div className="flex items-center justify-center gap-4 text-center text-neutral-900 dark:text-white text-4xl font-bold pt-12 tracking-wider">
               <svg
                 width="32"
                 height="32"
-                fill="#ffffff"
+                fill="currentColor"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -678,13 +712,13 @@ export default function App() {
           </div>
         </section>
         <section className="min-h-screen py-0 md:pb-24 " id="projects">
-          <div className="max-w-6xl bg-neutral-900 mx-auto px-8 rounded-lg">
-            <div className="flex items-center justify-center gap-4 text-center text-white text-4xl font-bold pt-12 tracking-wider">
+          <div className="max-w-6xl bg-white dark:bg-neutral-900 mx-auto px-8 rounded-lg">
+            <div className="flex items-center justify-center gap-4 text-center text-neutral-900 dark:text-white text-4xl font-bold pt-12 tracking-wider">
               <svg
                 width="32"
                 height="32"
                 fill="none"
-                stroke="#ffffff"
+                stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
@@ -708,9 +742,9 @@ export default function App() {
           </div>
         </section>
         <section className="min-h-screen py-0 md:pb-24" id="contact">
-          <div className="max-w-6xl bg-neutral-900 mx-auto px-8 rounded-lg">
-            <div className="flex items-center justify-center gap-4 text-center text-white text-4xl font-bold pt-12 tracking-wider">
-              <Mail size={32} color="#ffffff" />
+          <div className="max-w-6xl bg-white dark:bg-neutral-900 mx-auto px-8 rounded-lg">
+            <div className="flex items-center justify-center gap-4 text-center text-neutral-900 dark:text-white text-4xl font-bold pt-12 tracking-wider">
+              <Mail size={32} className="text-neutral-900 dark:text-white" />
               <span>Contact</span>
             </div>
             <div className="py-10" id="content">
