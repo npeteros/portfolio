@@ -20,7 +20,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Github, Globe } from "lucide-react";
+import { Github, Globe, Mail } from "lucide-react";
 
 const pages = [
   "home",
@@ -29,6 +29,7 @@ const pages = [
   "skills",
   "certificates",
   "projects",
+  "contact",
 ];
 
 function NavLink({
@@ -238,6 +239,83 @@ function Certificates({ certificates }: { certificates: Certificate[] }) {
   );
 }
 
+function Contact() {
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setForm({ name: "", email: "", message: "" });
+    setSubmitted(true);
+    setTimeout(() => setSubmitted(false), 4000);
+  };
+
+  return (
+    <div className="w-full max-w-xl mx-auto flex flex-col gap-6">
+      <AnimatePresence>
+        {submitted && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="rounded-xl bg-emerald-800/80 border border-emerald-500 text-white text-center py-3 px-4"
+          >
+            Message sent! I'll get back to you soon.
+          </motion.div>
+        )}
+      </AnimatePresence>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <input
+          type="text"
+          name="name"
+          required
+          placeholder="Your Name"
+          value={form.name}
+          onChange={handleChange}
+          className="rounded-xl bg-neutral-800 border border-white/[0.2] text-white placeholder:text-neutral-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-carnelian-red"
+        />
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="Your Email"
+          value={form.email}
+          onChange={handleChange}
+          className="rounded-xl bg-neutral-800 border border-white/[0.2] text-white placeholder:text-neutral-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-carnelian-red"
+        />
+        <textarea
+          name="message"
+          required
+          rows={5}
+          placeholder="Your Message"
+          value={form.message}
+          onChange={handleChange}
+          className="rounded-xl bg-neutral-800 border border-white/[0.2] text-white placeholder:text-neutral-400 px-4 py-3 resize-none focus:outline-none focus:ring-2 focus:ring-carnelian-red"
+        />
+        <button
+          type="submit"
+          className="rounded-xl bg-carnelian-red text-white text-center w-full py-4 hover:-translate-y-1 hover:scale-100 focus:-translate-y-1 focus:scale-100 focus:outline-none"
+        >
+          Send Message
+        </button>
+      </form>
+      <a
+        href="mailto:n.peteros2003@gmail.com"
+        className="flex items-center justify-center gap-2 text-white/80 hover:text-white text-sm"
+      >
+        <Mail size={16} />
+        or email me directly
+      </a>
+    </div>
+  );
+}
+
 export default function App() {
   const words = ["frontend", "backend", "fullstack", "mobile"];
 
@@ -276,6 +354,7 @@ export default function App() {
     scroll.reveal("#skills");
     scroll.reveal("#projects");
     scroll.reveal("#certificates");
+    scroll.reveal("#contact");
     scroll.reveal("#content", { delay: 400, interval: 600 });
     scroll.reveal("#content-2", { delay: 600 });
     scroll.reveal("#content-3", { delay: 800 });
@@ -338,8 +417,11 @@ export default function App() {
                     <button
                       className="rounded-xl bg-carnelian-red text-white text-center w-full py-4 hover:-translate-y-1 hover:scale-100 focus:-translate-y-1 focus:scale-100 focus:outline-none"
                       onClick={() =>
-                        (window.location.href =
-                          "mailto:n.peteros2003@gmail.com")
+                        document.getElementById("contact")?.scrollIntoView({
+                          block: "start",
+                          inline: "nearest",
+                          behavior: "smooth",
+                        })
                       }
                     >
                       Contact Now
@@ -611,6 +693,17 @@ export default function App() {
               id="content"
             >
               <Projects projects={projects} />
+            </div>
+          </div>
+        </section>
+        <section className="min-h-screen py-0 md:pb-24" id="contact">
+          <div className="max-w-6xl bg-neutral-900 mx-auto px-8 rounded-lg">
+            <div className="flex items-center justify-center gap-4 text-center text-white text-4xl font-bold pt-12 tracking-wider">
+              <Mail size={32} color="#ffffff" />
+              <span>Contact</span>
+            </div>
+            <div className="py-10" id="content">
+              <Contact />
             </div>
           </div>
         </section>

@@ -1,50 +1,42 @@
-# React + TypeScript + Vite
+# peterosJS — Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site for Neal Andrew B. Peteros, a full-stack web developer from Cebu, Philippines. It's a single-page, scroll-navigated site covering Home, About, Work Experience, Skills, Certificates, Projects, and Contact.
 
-Currently, two official plugins are available:
+**Live site:** https://peterosjs.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Home section screenshot](docs/screenshot-home.jpg)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Home** — intro, animated rotating role (`frontend`/`backend`/`fullstack`/`mobile`), social links, and CTAs.
+- **About** — bio and resume download.
+- **Experience** — timeline of past roles.
+- **Skills** — tech stack grid with hover effects.
+- **Certificates** — carousel of earned certificates.
+- **Projects** — cards with description, live link, and GitHub link for each project.
+- **Contact** — a name/email/message form with client-side validation and an inline success confirmation on submit.
+- Smooth section-to-section navigation with active-link highlighting as you scroll.
+- Scroll-triggered fade-in animations (`scrollreveal`) and hover/motion effects (`framer-motion`).
+- Fully responsive layout (mobile, tablet, desktop).
 
-- Configure the top-level `parserOptions` property like this:
+## Technologies Used
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vite.dev/) — build tooling
+- [Tailwind CSS](https://tailwindcss.com/) — styling
+- [Framer Motion](https://www.framer.com/motion/) — animations
+- [ScrollReveal](https://scrollrevealjs.org/) — scroll-triggered reveals
+- [Flowbite React](https://flowbite-react.com/) — carousel component
+- [Radix UI](https://www.radix-ui.com/) — accessible accordion primitive
+- [React Router](https://reactrouter.com/) — routing/links
+- [Lucide React](https://lucide.dev/) — icons
+- Deployed on [Vercel](https://vercel.com/)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Setup
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm install      # install dependencies
+npm run dev      # start local dev server
+npm run build    # type-check and build for production
+npm run preview  # preview the production build locally
 ```
