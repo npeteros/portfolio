@@ -77,6 +77,7 @@ interface Project {
   img: string;
   link: string;
   github: string;
+  tech: string[];
 }
 
 interface Certificate {
@@ -188,6 +189,16 @@ function Projects({ projects }: { projects: Project[] }) {
           <Github size={16} />
           GitHub
         </a>
+      </div>
+      <div className="flex flex-wrap items-center justify-center gap-2 pb-2">
+        {p.tech.map((t) => (
+          <span
+            key={t}
+            className="rounded-full border border-white/[0.2] bg-neutral-800 px-3 py-1 text-xs text-white/80"
+          >
+            {t}
+          </span>
+        ))}
       </div>
       <Accordion type="single" collapsible className="w-full">
         <AccordionItem value="item-1" className="text-white">
