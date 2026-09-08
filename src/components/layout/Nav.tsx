@@ -9,7 +9,6 @@ const pages = [
   "skills",
   "certificates",
   "projects",
-  "contact",
 ];
 
 function NavLink({

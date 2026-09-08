@@ -31,18 +31,12 @@ export function Home() {
                 developer with a passion for learning and innovation.
               </div>
               <div className="w-5/6 mx-auto md:mx-0 md:w-2/2 lg:w-1/2 flex flex-wrap md:flex-nowrap justify-between gap-4">
-                <button
+                <a
+                  href="mailto:n.peteros2003@gmail.com"
                   className="rounded-xl bg-carnelian-red text-white text-center w-full py-4 hover:-translate-y-1 hover:scale-100 focus:-translate-y-1 focus:scale-100 focus:outline-none"
-                  onClick={() =>
-                    document.getElementById("contact")?.scrollIntoView({
-                      block: "start",
-                      inline: "nearest",
-                      behavior: "smooth",
-                    })
-                  }
                 >
                   Contact Now
-                </button>
+                </a>
                 <button
                   className="rounded-xl bg-transparent border-2 border-black/30 dark:border-white/30 text-neutral-900 dark:text-white text-center w-full py-4 hover:-translate-y-1 hover:scale-100 focus:-translate-y-1 focus:scale-100"
                   onClick={() =>

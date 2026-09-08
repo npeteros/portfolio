@@ -5,7 +5,6 @@ import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { Skills } from "@/components/sections/Skills";
 import { Certificates } from "@/components/sections/Certificates";
 import { Projects } from "@/components/sections/Projects";
-import { Contact } from "@/components/sections/Contact";
 import { useTheme } from "@/hooks/useTheme";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
@@ -24,7 +23,6 @@ export default function App() {
       <Skills />
       <Certificates />
       <Projects />
-      <Contact />
     </div>
   );
 }

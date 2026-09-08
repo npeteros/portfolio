@@ -16,7 +16,6 @@ export function useScrollReveal() {
     scroll.reveal("#skills");
     scroll.reveal("#projects");
     scroll.reveal("#certificates");
-    scroll.reveal("#contact");
     scroll.reveal("#content", { delay: 400, interval: 600 });
     scroll.reveal("#content-2", { delay: 600 });
     scroll.reveal("#content-3", { delay: 800 });
